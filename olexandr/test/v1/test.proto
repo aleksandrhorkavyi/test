@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test.v1;
+
+message TestMessage {
+  int32 id = 1;
+}
+
+message Req {
+
+}
+
+message Resp {
+  repeated TestMessage messages = 1;
+}
+
+service TestService {
+  rpc Foo (Req) returns (Resp);
+}
